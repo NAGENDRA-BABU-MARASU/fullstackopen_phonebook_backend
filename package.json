@@ -9,11 +9,14 @@
     "build:ui": "rm -rf dist && cd ../../part2/phonebook &&  npm run build && cp -r dist ../../part3/phonebook_backend",
     "deploy:full:windows": "npm config set script-shell \"C:\\Program Files\\git\\bin\\bash.exe\" && npm run build:ui && git add . && git commit -m uibuild && git push",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "lint": "eslint ."
   },
   "author": "Nagendra",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
     "nodemon": "^3.0.3"
   },
   "dependencies": {
